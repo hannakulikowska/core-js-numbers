@@ -603,7 +603,10 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-  return Math.random() * (max - min) + min;
+  let random = Math.random();
+  const difference = max - min;
+  random = Math.floor(random * difference) + min;
+  return random;
 }
 
 /**
